@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeongseo Kim</title>
+		<link rel="icon" type="image/png" href="../assets/images/bunny_logo.png" data-light-href="../assets/images/bunny_logo.png" data-dark-href="../assets/images/bunny_logo_dark.png">
+		<link rel="apple-touch-icon" href="../assets/images/bunny_logo.png" data-light-href="../assets/images/bunny_logo.png" data-dark-href="../assets/images/bunny_logo_dark.png">
+
+
+
+    <style>
+        /* --- Styles remain mostly the same --- */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f4f9; padding: 40px; margin: 0; }
+        h1 { text-align: center; color: #333; margin-bottom: 40px; }
+
+        #card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.2s;
+            display: flex; flex-direction: column; text-decoration: none; color: inherit;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .card-image-wrapper { width: 100%; height: 200px; background-color: #cfd8dc; /*#e0e0e0*/ overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+        .card-image { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { margin: 0 0 10px 0; font-size: 1.25rem; font-weight: 700; color: #2c3e50; }
+        .card-desc { font-size: 0.95rem; color: #666; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+        .skeleton { animation: skeleton-loading 1s linear infinite alternate; height: 350px; }
+        @keyframes skeleton-loading { 0% { background-color: #e0e0e0; } 100% { background-color: #f0f0f0; } }
+        .error-msg { padding: 20px; color: red; text-align: center; }
+    </style>
+
+<link rel="stylesheet" href="../assets/css/placeholders.css">
+</head>
+<body>
+    <h1>Projects</h1>
+    <div id="card-container"><div class="card"><span class="image-placeholder project-placeholder" role="img" aria-label="Project image placeholder"></span><div class="card-content"><h3></h3><p></p></div></div><div class="card"><span class="image-placeholder project-placeholder" role="img" aria-label="Project image placeholder"></span><div class="card-content"><h3></h3><p></p></div></div><div class="card"><span class="image-placeholder project-placeholder" role="img" aria-label="Project image placeholder"></span><div class="card-content"><h3></h3><p></p></div></div><div class="card"><span class="image-placeholder project-placeholder" role="img" aria-label="Project image placeholder"></span><div class="card-content"><h3></h3><p></p></div></div><div class="card"><span class="image-placeholder project-placeholder" role="img" aria-label="Project image placeholder"></span><div class="card-content"><h3></h3><p></p></div></div></div>
+
+
+
+<script src="../assets/js/template.js"></script>
+<footer class="site-footer">
+	<div class="site-footer-links">
+		<a href="https://www.linkedin.com/in/yeongseo-kim-b34251420/">LinkedIn</a>
+		<a href="https://github.com/yseokim01">GitHub</a>
+		<a href="#">Google Scholar</a>
+	</div>
+	<p class="copyright">&copy; 2026 Yeongseo Kim</p>
+</footer>
+</body>
+</html>

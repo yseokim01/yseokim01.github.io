@@ -1,0 +1,84 @@
+/* Empty content slots preserve the source layout without carrying over images. */
+.image-placeholder {
+	display: inline-block;
+	width: 100%;
+	max-width: 100%;
+	aspect-ratio: 4 / 3;
+	vertical-align: middle;
+	background: #e8ebed;
+	border: 1px dashed #aeb7bd;
+	border-radius: 0.35rem;
+}
+
+.image-placeholder.image.right {
+	width: 240px;
+}
+
+.project-placeholder {
+	display: block;
+	aspect-ratio: 16 / 9;
+	border-radius: 0;
+}
+
+#header img.site-logo,
+.site-logo {
+	display: inline-block;
+	width: 4.5rem;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto 1rem;
+	vertical-align: middle;
+}
+
+#nav-menu img.site-logo {
+	width: 3rem;
+}
+
+#main h1:empty,
+#main h2:empty,
+#main h3:empty,
+#main p:empty,
+#main summary:empty,
+#main td:empty,
+#main li:empty {
+	min-height: 1.75em;
+}
+
+a[aria-disabled="true"] {
+	cursor: default;
+}
+
+:root[data-theme="dark"] .image-placeholder {
+	background: #2d3339;
+	border-color: #626d77;
+}
+
+.site-footer {
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.site-footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.site-footer a {
+	color: inherit;
+}
+
+.site-footer .copyright {
+	margin: 0;
+	font-size: 0.875rem;
+}
+
+@media screen and (max-width: 480px) {
+	.image-placeholder.image.right {
+		float: none;
+		display: block;
+		margin: 0 0 1.5rem;
+	}
+}
