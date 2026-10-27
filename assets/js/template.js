@@ -3,6 +3,7 @@
 	'use strict';
 
 	var root = document.documentElement;
+	var browserColorTheme = window.matchMedia('(prefers-color-scheme: dark)');
 	var theme = 'light';
 	try {
 		theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
@@ -10,12 +11,15 @@
 		// The theme still works when browser storage is unavailable.
 	}
 
-	function applyTheme() {
-		root.setAttribute('data-theme', theme);
+	function applyPageIcon() {
 		document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]').forEach(function (icon) {
-			var href = theme === 'dark' ? icon.dataset.darkHref : icon.dataset.lightHref;
+			var href = browserColorTheme.matches ? icon.dataset.darkHref : icon.dataset.lightHref;
 			if (href) icon.setAttribute('href', href);
 		});
+	}
+
+	function applyTheme() {
+		root.setAttribute('data-theme', theme);
 		document.querySelectorAll('img.site-logo').forEach(function (logo) {
 			var src = theme === 'dark' ? logo.dataset.darkSrc : logo.dataset.lightSrc;
 			if (src) logo.setAttribute('src', src);
@@ -26,6 +30,8 @@
 	}
 
 	applyTheme();
+	applyPageIcon();
+	browserColorTheme.addEventListener('change', applyPageIcon);
 	document.querySelectorAll('.theme-toggle').forEach(function (toggle) {
 		toggle.addEventListener('click', function (event) {
 			event.preventDefault();

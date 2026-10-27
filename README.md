@@ -7,9 +7,11 @@ section headings, tables, and forms are retained. Personal text, project and
 publication data, images, documents, videos, and external service integrations
 are omitted from the source site. The home page uses the supplied profile photo
 at `assets/images/yseokim_profile.jpg`. The site logo and page icons use
-the filled `assets/images/bunny_logo.png`. Logos and page icons switch to the
-transparent white `assets/images/bunny_logo_dark.png` in dark mode. The original
-outlines are preserved as `assets/images/bunny_logo_outline.png` and
+the filled `assets/images/bunny_logo.png`. Logos switch to the transparent white
+`assets/images/bunny_logo_dark.png` when the site's dark mode is selected.
+Page icons independently follow the browser's color scheme: white in dark mode
+and dark blue in light mode, updating automatically when that preference changes.
+The original outlines are preserved as `assets/images/bunny_logo_outline.png` and
 `assets/images/bunny_logo_outline_dark.png`; other image slots use CSS placeholders.
 Empty home-page sections, the biography's About Me toggle, and Study navigation
 are commented out. Other unfinished pages remain accessible. Publications is
